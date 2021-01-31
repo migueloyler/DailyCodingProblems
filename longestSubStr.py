@@ -4,7 +4,7 @@ Given a string s, find the length of the longest substring without repeating cha
 
 class Solution:
     
-    #disgusting O(n^2) approach
+    #O(n^2) approach
     '''
     def lengthOfLongestSubstring(self, s: str) -> int:
         n = len(s)
@@ -19,7 +19,7 @@ class Solution:
         return max_len
     '''
     
-    #beautiful O(n) apprach I figured out after some more thought
+    #O(n) approach
     def lengthOfLongestSubstring(self, s: str) -> int:
         if len(s) == 0:
             return 0
