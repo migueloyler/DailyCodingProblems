@@ -5,9 +5,19 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    
+    def __init__(self):
+        self.s = 0 #sum
+        
     def convertBST(self, root: TreeNode) -> TreeNode:
-        if root.right.right == None:
-            root.right.val
+        if root == None:
+            return
+        self.convertBST(root.right)
+        self.s += root.val
+        root.val = self.s
+        self.convertBST(root.left)
+        return root
+            
             
         
         
